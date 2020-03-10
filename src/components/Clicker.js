@@ -1,19 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function Clicker() {
 
+    let [count, setCount] = useState(0);
+
     const decrementCounter = () => {
-        console.log('-')
+        console.log('-', count)
+        setCount(--count)
     }
 
     const incrementCounter = () => {
-        console.log('+')
+        console.log('+', count)
+        setCount(++count)
     }
 
     return (
         <>
-            <button id='decrement-btn' onClick={ decrementCounter }>-</button>
-            <button id='increment-btn' onClick={ incrementCounter }>+</button>
+            <h1>{ count }</h1>
+            <button className='btn' onClick={ decrementCounter }>-</button>
+            <button className='btn' onClick={ incrementCounter }>+</button>
         </>
     )
 }
