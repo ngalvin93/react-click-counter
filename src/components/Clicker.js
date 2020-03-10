@@ -4,21 +4,16 @@ export default function Clicker() {
 
     let [count, setCount] = useState(0);
 
-    const decrementCounter = () => {
-        console.log('-', count)
-        setCount(--count)
-    }
-
-    const incrementCounter = () => {
-        console.log('+', count)
-        setCount(++count)
+    const handleBtnClick = (e) => {
+        console.log(e.target.id)
+        e.target.id === 'increment' ? setCount(++count) : setCount(--count)
     }
 
     return (
         <>
             <h1>{ count }</h1>
-            <button className='btn' onClick={ decrementCounter }>-</button>
-            <button className='btn' onClick={ incrementCounter }>+</button>
+            <button className='btn' id='decrement' onClick={ handleBtnClick }>-</button>
+            <button className='btn' id='increment' onClick={ handleBtnClick }>+</button>
         </>
     )
 }
