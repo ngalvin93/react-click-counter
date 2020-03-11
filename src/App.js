@@ -1,12 +1,16 @@
 import React from 'react';
-import Clicker from './components/Clicker'
+import Clicker from './components/Clicker';
+import { ThemeProvider } from 'emotion-theming';
+import preset from '@rebass/preset'
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <Clicker />
-    </div>
+    <ThemeProvider theme={preset}>
+      <div className="App">
+        <Clicker />
+      </div>
+    </ThemeProvider>
   );
 }
 
