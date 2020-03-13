@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import { Text, Button } from 'rebass'
-import './styles/clicker.css'
+import { Text, Button, Box } from 'rebass'
 
 export default function Clicker() {
 
@@ -12,15 +11,17 @@ export default function Clicker() {
     }
 
     return (
-        <div id='counter'>
-            <Text
-                fontSize={[ 3, 4, 5 ]}
-                fontWeight='bold'
-                color='primary'>
-                { count }
-            </Text>
-            <Button className='btn' id='decrement' onClick={ handleBtnClick } variant='primary' mr={2}>-</Button>
-            <Button className='btn' id='increment' onClick={ handleBtnClick } variant='primary' mr={2}>+</Button>
-        </div>
+        <Box width={1} height={500} alignItems='center' alignContent='center'>
+            <div id='counter'>
+                <Text
+                    fontSize={[ 5, 6, 7]}
+                    fontWeight='bold'
+                    color='primary'>
+                    { count }
+                </Text>
+                <Button className='btn' id='decrement' onClick={ handleBtnClick } variant='primary' mr={2}>-</Button>
+                <Button className='btn' id='increment' onClick={ handleBtnClick } variant='primary' mr={2}>+</Button>
+            </div>
+        </Box>
     )
 }
