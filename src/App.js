@@ -8,8 +8,8 @@ import './App.css';
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Flex className="App">
-        <Box>
+      <Flex className="App" alignItems='center'>
+        <Box width={1} height={128}>
           <Clicker />
         </Box>
       </Flex>

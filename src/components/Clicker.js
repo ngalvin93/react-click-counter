@@ -12,7 +12,7 @@ export default function Clicker() {
     }
 
     return (
-        <>
+        <div id='counter'>
             <Text
                 fontSize={[ 3, 4, 5 ]}
                 fontWeight='bold'
@@ -21,6 +21,6 @@ export default function Clicker() {
             </Text>
             <Button className='btn' id='decrement' onClick={ handleBtnClick } variant='primary' mr={2}>-</Button>
             <Button className='btn' id='increment' onClick={ handleBtnClick } variant='primary' mr={2}>+</Button>
-        </>
+        </div>
     )
 }
